@@ -14,22 +14,43 @@
         team specific information to help you get off with information and
         details about the organization.
       </p>
-      <button
-        class="bg-white mt-4 px-5 py-2 font-bold uppercase hover:bg-orange-500 hover:text-white rounded-full"
-      >
-        Contact Us
-      </button>
+      <div class="mt-4">
+        <a
+          href="/contact"
+          class="bg-white hover:bg-orange-400 font-bold uppercase hover:text-white px-4 py-2 rounded-full"
+          >Contact Us</a
+        >
+      </div>
     </div>
   </div>
 
-  <div class="w-30 min-h-screen p-4">
-    <div class="flex">
-      <div class="flex flex-col bg-gray-100 rounded-lg shadow-md w-full m-6">
-        <img src="../assets/government.png" class="h-10 w-10" />
-        <h2 class="text-center px-2 pb-5">e-Governance Project</h2>
-        <a href="#" class="bg-orange-500 text-white p-3 text-center">18+</a>
-      </div>
+  <div class="mt-4 grid lg:grid-cols-2 w-[1200px]">
+    <div class="col-span-1">
+      <h3 class="font-bold">About Us</h3>
     </div>
+    <div class="col-span-1">
+      <h2 class="font-bold">WE TRANSFORM YOUR IDEA INTO SOLUTION</h2>
+    </div>
+    <p class="">
+      Since 2005, Our mission has been “Building IT solutions for Life”. We
+      believe in living in the Present and Future!<br />
+      Orangebd is an award-winning web development company in Bangladesh. We
+      pledge to offer a wide range of web applications and development solutions
+      to meet any kind of business demand. Organizations from many Corporate
+      sectors and Businesses have depended on us with full trust and
+      confidence.....
+    </p>
+    <a href="/about" class="text-orange-400">Read More..</a>
+  </div>
+  <div class="h-100 flex justify-center items-center group">
+    <img
+      class="absulate z-10 h-4/6 2xl:h-3/4 group-hover:animate-trans-right"
+      src="../assets/image1.png"
+    />
+    <img
+      class="rotate-12 h-4/6 2xl:h-5/6 relative -top-10 left-14 group-hover:animate-trans-left"
+      src="../assets/image2.png"
+    />
   </div>
 </template>
 

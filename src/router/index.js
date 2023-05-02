@@ -20,27 +20,27 @@ const routes = [
             component: Home,
         },
         {
-            path: '/by-about/:about?',
+            path: '/about/:about?',
             name: 'byAbout',
             component: About,
         },
         {
-            path: '/by-contact/:contact?',
+            path: '/contact/:contact?',
             name: 'byContact',
             component: Contact,
         },
         {
-            path: '/by-project/:project?',
+            path: '/project/:project?',
             name: 'byProject',
             component: Project,
         },
         {
-            path: '/by-service/:service?',
+            path: '/service/:service?',
             name: 'byService',
             component: Service,
         },
         {
-            path: '/by-team/:team?',
+            path: '/team/:team?',
             name: 'byTeam',
             component: Team,
         },
