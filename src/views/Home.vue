@@ -1,20 +1,20 @@
 <template>
-  <div class="text-center">
+  <div class="text-left">
     <div
-      class="bg-[url(https://orangebd.com/images/slider/01.png)] h-96 w-full bg-cover bg-center p-24"
+      class="bg-[url(https://orangebd.com/images/slider/01-2.png)] h-100 w-full bg-cover bg-center p-24"
     >
-      <h4 class="text-orange-500 text-lg font-semibold text-center">
+      <h4 class="text-orange-500 text-lg font-semibold text-left">
         Leading Software Company In Bangladesh
       </h4>
-      <h1 class="text-white text-2xl font-smeibold text-center py-6">
+      <h1 class="text-white text-2xl font-smeibold text-left py-6">
         Innovation Starts From Here
       </h1>
-      <p class="text-gray-200 text-center">
+      <p class="text-gray-200 w-96 leading-relaxed text-left">
         We’re so glad to have you on our Site! This guide is meant to provide
         team specific information to help you get off with information and
         details about the organization.
       </p>
-      <div class="mt-4">
+      <div class="mt-6">
         <a
           href="/contact"
           class="bg-white hover:bg-orange-400 font-bold uppercase hover:text-white px-4 py-2 rounded-full"
@@ -44,7 +44,9 @@
       <a href="/about" class="text-orange-400">Read More..</a>
     </div>
 
-    <div class="basis-[45%] w-full flex justify-center items-center group">
+    <div
+      class="basis-[45%] max-w-[1000px] flex justify-center items-center group"
+    >
       <img
         class="absulate z-10 h-4/6 2xl:h-3/4 group-hover:animate-trans-right"
         src="../assets/image1.png"
@@ -139,152 +141,186 @@
     </div>
   </div>
 
-  <div class="max-w-[1000px] md:py-[80] py-3 mx-auto">
+  <div class="max-w-[1000px] py-3 mx-auto">
     <h1 class="text-2xl font-semibold text-orange-400 text-center">
       Our Project
     </h1>
 
-    <div
-      id="default-carousel"
-      class="relative w-50% py-3"
-      data-carousel="slide"
-    >
-      <!-- Carousel wrapper -->
-      <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
-        <!-- Item 1 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="../assets/image8.png"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 2 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="../assets/image9.png"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 3 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="../assets/image8.png"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 4 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="../assets/image9.png"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-        <!-- Item 5 -->
-        <div class="hidden duration-700 ease-in-out" data-carousel-item>
-          <img
-            src="../assets/image8.png"
-            class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
-            alt="..."
-          />
-        </div>
-      </div>
-      <!-- Slider indicators -->
-      <div
-        class="absolute z-30 flex space-x-3 -translate-x-1/2 bottom-5 left-1/2"
+    <div class="px-6 mt-6 mx-auto h-[450px] max-w-[1000px]">
+      <swiper
+        :slidesPerView="3"
+        :centeredSlides="false"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :spaceBetween="20"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="modules"
+        class="mySwiper1 mt-8 mx-auto"
       >
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="true"
-          aria-label="Slide 1"
-          data-carousel-slide-to="0"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 2"
-          data-carousel-slide-to="1"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 3"
-          data-carousel-slide-to="2"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 4"
-          data-carousel-slide-to="3"
-        ></button>
-        <button
-          type="button"
-          class="w-3 h-3 rounded-full"
-          aria-current="false"
-          aria-label="Slide 5"
-          data-carousel-slide-to="4"
-        ></button>
-      </div>
-      <!-- Slider controls -->
-      <button
-        type="button"
-        class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-prev
-      >
-        <span
-          class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M15 19l-7-7 7-7"
-            ></path>
-          </svg>
-          <span class="sr-only">Previous</span>
-        </span>
-      </button>
-      <button
-        type="button"
-        class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
-        data-carousel-next
-      >
-        <span
-          class="inline-flex items-center justify-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none"
-        >
-          <svg
-            aria-hidden="true"
-            class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
+            <a href="https://sisimpurvillage.com/">
+              <img
+                src="../assets/image8.png"
+                class="p-6 mx-auto text-center"
+                alt=""
+              />
+              <img src="../assets/test-1-1.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-auto">
+                Sisimpur is an e-learning interactive platform to reinforce the
+                message in Sisimpur's television episodes...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-          <span class="sr-only">Next</span>
-        </span>
-      </button>
+            <a href="https://www.mygov.bd/">
+              <img
+                src="../assets/image9.png"
+                class="p-6 mx-auto text-center"
+                alt=""
+              />
+              <img src="../assets/test-2-2.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-2">
+                myGov serves as a centralized platform,offering citizens a
+                convenient single access point to avail themselves of a wide...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
+          >
+            <a href="http://www.rdcd.gov.bd/">
+              <img
+                src="../assets/image56-new.png"
+                class="p-4 mt-4 mx-auto text-center"
+                alt=""
+              />
+              <img src="../assets/test-3-3.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-auto">
+                Integrated Digital Service Delivery Platform (IDSDP) project is
+                developed automating the whole RDCD...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
+          >
+            <a href="https://bangladesh.gov.bd/index.php">
+              <img
+                src="../assets/image57.png"
+                class="p-4 mt-4 mx-auto w-[300px] text-center"
+                alt=""
+              />
+              <img src="../assets/test-2-2.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-2">
+                Bangladesh National Portal is the largest digital
+                platform(Portal). It has sites with all kinds of information and
+                services about all the Division...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
+          >
+            <a href="https://muktopaath.gov.bd/">
+              <img
+                src="../assets/image58.png"
+                class="p-6 mx-auto w-[150px] text-center"
+                alt=""
+              />
+              <img src="../assets/test-2-2.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-auto">
+                Open e-learning platform in Bengali language for those intersted
+                in acquiring professional knowledge and skills.Right now
+                there...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
+          >
+            <a href="https://sisimpurvillage.com/">
+              <img
+                src="../assets/image59-new.png"
+                class="p-6 mx-auto w-[120px] text-center"
+                alt=""
+              />
+              <img src="../assets/test-2-2.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-2">
+                myCourt is the service delivery platform for all the courts of
+                Bangladesh. Lawyers on behalf of the citizens can apply for the
+                Bail...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div
+            class="w-[220px] h-[400px] mx-auto text-center border shadow-lg rounded-lg"
+          >
+            <a href="https://sisimpurvillage.com/">
+              <img
+                src="../assets/mycourt2.png"
+                class="p-6 mx-auto w-[180px] text-center"
+                alt=""
+              />
+              <img src="../assets/test-2-2.png" class="mx-auto" alt="" />
+              <p class="text-gray-600 text-base text-center mx-2">
+                Judicial Portal Framework is the one-stop judiciary information
+                and service access platform for the citizens of Bangladesh. The
+                judicial...
+              </p>
+              <div class="mt-6"></div>
+              <span class="text-green-600 text-base font-semibold underline p-2"
+                >View More</span
+              >
+            </a>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </div>
 
@@ -300,71 +336,295 @@
       with business direction.
     </p>
   </div>
+  <div class="max-w-[1000px] mx-auto text-center h-[350px]">
+    <h1 class="text-lg font-semibold">Our Happy Clients</h1>
+    <h2 class="text-2xl">What they say about us</h2>
+    <swiper
+      :slidesPerView="1"
+      :centeredSlides="false"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :spaceBetween="40"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      class="mySwiper mt-8 mx-auto"
+    >
+      <swiper-slide>
+        <div
+          class="w-full h-[250px] mx-auto bg-white border shadow-lg rounded-lg"
+        >
+          <div class="flex mx-auto md:flex-row flex-row space-x-8">
+            <div class="basis-[65%]">
+              <p class="text-gray-500 mx-auto px-2 p-4">
+                "A company will only be successful when they know what their
+                customer wants the most and what their company is best at. And
+                here at Orangebd we serve our customer's wants with what we do
+                best."
+              </p>
+              <img
+                src="../assets/NTV_(Bangladesh)_logo.png"
+                class="mt-2 py-2 ml-4 inline-flex w-[100px] h-[100px] rounded-lg"
+                alt=""
+              />
+            </div>
+            <div class="basis-[35%]">
+              <img
+                src="../assets/image23.png"
+                class="mt-4 mx-auto w-[120px] h-[120px]"
+                alt=""
+              />
+              <h1 class="text-xl font-semibold mt-4">Fakruddin Jewel</h1>
+              <h1 class="mt-2">NTV Online ( Head of NTV Online )</h1>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-full h-[250px] mx-auto bg-white border shadow-lg rounded-lg"
+        >
+          <div class="flex mx-auto md:flex-row flex-row space-x-8">
+            <div class="basis-[65%]">
+              <p class="text-gray-500 mx-auto px-2 p-4">
+                "Orangebd is one of the most reliable software organisations
+                among the digital News Industry in Bangladesh.All the people
+                there are skilled, innovative and trustworthy"
+              </p>
+              <img
+                src="../assets/image58.png"
+                class="mt-2 py-2 ml-4 inline-flex w-[100px] h-[100px] rounded-lg"
+                alt=""
+              />
+            </div>
+            <div class="basis-[35%]">
+              <img
+                src="../assets/image24.png"
+                class="mt-4 mx-auto w-[120px] h-[120px]"
+                alt=""
+              />
+              <h1 class="text-xl font-semibold mt-4 px-2">
+                Md. Hafijur Rahman
+              </h1>
+              <h1 class="mt-2">a2i ( Solution Architect )</h1>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-full h-[250px] mx-auto bg-white border shadow-lg rounded-lg"
+        >
+          <div class="flex mx-auto md:flex-row flex-row space-x-8">
+            <div class="basis-[65%]">
+              <p class="text-gray-500 mx-auto px-2 p-4">
+                "Everything went extremely well. I was very impressed with their
+                fantastic team, communications and willingness to move
+                directions. I can recommend Orangebd for any web applications."
+              </p>
+              <img
+                src="../assets/unfpa.png"
+                class="mt-2 py-2 ml-4 inline-flex w-[100px] h-[100px] rounded-lg"
+                alt=""
+              />
+            </div>
+            <div class="basis-[35%]">
+              <img
+                src="../assets/image25.jpg"
+                class="mt-4 mx-auto w-[120px] h-[120px]"
+                alt=""
+              />
+              <h1 class="text-xl font-semibold mt-4 px-2">
+                Ahasan Uddin Bhuiyan Abir
+              </h1>
+              <h1 class="mt-2">UNFPA Bangladesh ( IT Officer )</h1>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-full h-[250px] mx-auto bg-white border shadow-lg rounded-lg"
+        >
+          <div class="flex mx-auto md:flex-row flex-row space-x-8">
+            <div class="basis-[65%]">
+              <p class="text-gray-500 mx-auto px-2 p-4">
+                "We have been working with Orangebd since 2016. They are very
+                professional and client centric"
+              </p>
+              <img
+                src="../assets/banasree-dental-and-implant-center.jpg"
+                class="mt-2 py-2 ml-4 inline-flex w-[100px] h-[100px] rounded-lg"
+                alt=""
+              />
+            </div>
+            <div class="basis-[35%]">
+              <img
+                src="../assets/image22.png"
+                class="mt-4 mx-auto w-[120px] h-[120px]"
+                alt=""
+              />
+              <h1 class="text-xl font-semibold mt-4 px-2">
+                Dr. Abdullah-Al-Mamun
+              </h1>
+              <h1 class="mt-2">Banasree Dental and Implant Center</h1>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-full h-[250px] mx-auto bg-white border shadow-lg rounded-lg"
+        >
+          <div class="flex mx-auto md:flex-row flex-row space-x-8">
+            <div class="basis-[65%]">
+              <p class="text-gray-500 mx-auto px-2 p-4">
+                "Working with Orangebd has always been a great pleasure.
+                Orangebd serves their clients with the best of their abilities
+                and they are flexible and agile. I love their devotion and
+                integrity"
+              </p>
+              <img
+                src="../assets/nrbtv-social1.png"
+                class="mt-2 py-2 ml-4 inline-flex w-[100px] h-[100px] rounded-lg"
+                alt=""
+              />
+            </div>
+            <div class="basis-[35%]">
+              <img
+                src="../assets/image21.png"
+                class="mt-4 mx-auto w-[120px] h-[120px]"
+                alt=""
+              />
+              <h1 class="text-xl font-semibold mt-4 px-2">
+                Shahidul Islam Mintu
+              </h1>
+              <h1 class="mt-2">
+                NRB TV ( CEO )<br />
+                Bengali Times ( Editor )
+              </h1>
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper>
+  </div>
 
-  <div class="flex items-center">
-    <svg
-      aria-hidden="true"
-      class="w-5 h-5 text-orange-400"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
+  <div class="px-6 mt-6 mx-auto h-[300px] max-w-[1000px]">
+    <h1 class="text-4xl font-semibold text-center">We are working with</h1>
+    <swiper
+      :slidesPerView="2"
+      :centeredSlides="false"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
+      :spaceBetween="40"
+      :pagination="{
+        clickable: true,
+      }"
+      :navigation="true"
+      :modules="modules"
+      class="mySwiper mt-8 mx-auto"
     >
-      <title>First star</title>
-      <path
-        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-      ></path>
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="w-5 h-5 text-orange-400"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>Second star</title>
-      <path
-        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-      ></path>
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="w-5 h-5 text-orange-400"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>Third star</title>
-      <path
-        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-      ></path>
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="w-5 h-5 text-orange-400"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>Fourth star</title>
-      <path
-        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-      ></path>
-    </svg>
-    <svg
-      aria-hidden="true"
-      class="w-5 h-5 text-gray-300 dark:text-gray-500"
-      fill="currentColor"
-      viewBox="0 0 20 20"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>Fifth star</title>
-      <path
-        d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
-      ></path>
-    </svg>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-gray-100 border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-10-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-gray-100 border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-11-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-gray-100 border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-12-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-gray-100 border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-13-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-gray-100 border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-14-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div
+          class="w-[150px] h-[150px] mx-auto text-center bg-white border shadow-lg rounded-lg"
+        >
+          <img
+            src="../assets/test-15-new.png"
+            class="p-10 mx-auto text-center"
+            alt=""
+          />
+        </div>
+      </swiper-slide>
+    </swiper>
   </div>
 </template>
 
-<script setup>
+<script>
 import { computed } from "vue";
+
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
+  setup() {
+    return {
+      modules: [Autoplay, Pagination, Navigation],
+    };
+  },
+};
 </script>
