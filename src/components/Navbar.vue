@@ -70,61 +70,57 @@
       >
         Contact us
       </router-link>
-      <!--
-      <ul
-        class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-      >
-        <li>
-          <router-link
-            :to="{ name: 'home' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-            aria-current="page"
-          >
-            Home
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'byAbout' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-          >
-            About Us
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'byService' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-          >
-            Service
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'byProject' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-          >
-            Our Project
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'byTeam' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-          >
-            Our Team
-          </router-link>
-        </li>
-        <li>
-          <router-link
-            :to="{ name: 'byContact' }"
-            class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-          >
-            Contact Us
-          </router-link>
-        </li>
-      </ul>
-      -->
     </div>
   </nav>
 </template>
+
+<!--
+<template>
+  <div class="bg-white py-6 px-6 shadow md:flex justify-between items-center">
+    <div class="flex items-center cursor-pointer">
+      <img class="h-8 px-4" src="../assets/orbd-logo.png" alt="Logo" />
+    </div>
+
+    <span
+      @click="MenuOpen()"
+      class="absolute md:hidden right-6 top-1.5 cursor-pointer text-2xl"
+    >
+      <i :class="[open ? 'bi bi-x' : 'bi bi-filter-left']"></i>
+    </span>
+    <ul
+      class="md:flex md:items-center md:px-0 px-10 md:pb-0 pb-4 md:static absolute bg-white md:w-auto w-full top-14 duration-700 ease-in"
+      :class="[open ? 'left-0' : 'left-[-100%]']"
+    >
+      <li class="md:mx-4 md:my-0 my-6" v-bind:key="link in Links">
+        <a
+          :href="link.link"
+          class="text-lg text-gray-600 hover:text-orange-400"
+          >{{ link.name }}</a
+        >
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  setup() {
+    let open = ref(false);
+    let Links = [
+      { name: "Home", link: "#" },
+      { name: "About", link: "#" },
+      { name: "Service", link: "#" },
+      { name: "Our Project", link: "#" },
+      { name: "Our Team", link: "#" },
+      { name: "Contact Us", link: "#" },
+    ];
+
+    function MenuOpen() {
+      open.value = !open.value;
+    }
+
+    return { Links, open, MenuOpen };
+  },
+};
+</script>
+-->

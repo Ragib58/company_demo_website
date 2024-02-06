@@ -1,7 +1,7 @@
 <template>
-  <div class="h-[auto] grid grid-cols-1 md:grid-cols-2 sm:grid-cols-1 gap-2">
+  <div class="h-[auto] grid grid-cols-4 lg:grid-cols-4 sm:grid-cols-1 gap-2">
     <div
-      class="text-gray-500 border shadow-lg rounded-lg w-[40%] space-y-6 px-2"
+      class="col-span-1 ml-8 mt-6 text-gray-500 border shadow-lg rounded-lg w-[250px] h-[660px] space-y-6 px-2"
     >
       <a href="" class="flex items-center space-x-2 px-4 py-4">
         <svg
@@ -69,7 +69,7 @@
       </button>
     </div>
 
-    <div class="w-[60%]">
+    <div class="col-span-3 mt-6 mr-6">
       <component :is="tab" />
     </div>
   </div>

@@ -517,13 +517,13 @@
   <div class="px-6 mt-6 mx-auto h-[300px] max-w-[1000px]">
     <h1 class="text-4xl font-semibold text-center">We are working with</h1>
     <swiper
-      :slidesPerView="2"
+      :slidesPerView="4"
       :centeredSlides="false"
       :autoplay="{
         delay: 2500,
         disableOnInteraction: false,
       }"
-      :spaceBetween="40"
+      :spaceBetween="20"
       :pagination="{
         clickable: true,
       }"
